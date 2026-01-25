@@ -10,7 +10,8 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Image.asset(AppAssets.imagesLogo, height: 18),
+        title: Image.asset(AppAssets.imageLogo, height: 18),
+        // title: const Text('Bookly'),
         actions: [
           IconButton(
             onPressed: () {},

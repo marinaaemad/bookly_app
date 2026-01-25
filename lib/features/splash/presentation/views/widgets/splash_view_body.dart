@@ -1,4 +1,3 @@
-import 'package:bookly_app/core/utils/assets/app_assets.dart';
 import 'package:bookly_app/features/home/presentation/views/home_view.dart';
 import 'package:bookly_app/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AppAssets.imagesLogo),
+        Image.asset('assets/images/Logo.png'),
         const SizedBox(height: 4),
         //put animated builder instead of using setstate and rebuild all widget this will rebuild this widget only
         SlidingText(slidingAnimation: slidingAnimation),

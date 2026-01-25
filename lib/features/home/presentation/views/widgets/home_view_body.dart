@@ -8,12 +8,18 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        BooksListView(boxNumber: 10),
-        const Text('Best Sellers', style: Style.titleMedium),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          BooksListView(boxNumber: 10),
+          SizedBox(height: 30),
+          Text('Best Seller', style: Style.textStyle20Regular),
+          SizedBox(height: 20),
+          BestSellerListViewItem(),
+        ],
+      ),
     );
   }
 }
@@ -23,15 +29,35 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Image.asset(AppAssets.itemImage),
-      title: Text("Harry Potter And The Global Of Fire"),
-      subtitle: Column(
+    return SizedBox(
+      height: 120,
+      child: Row(
         children: [
-          Text('J.K Rowling'),
-          Row(children: [Text('19.99%')]),
+          AspectRatio(
+            aspectRatio: 2.5 / 4,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                // to get all width and hight of container
+                image: const DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(AppAssets.itemImage),
+                ),
+              ),
+            ),
+          ),
+          Text("Harry Potter And The Global Of Fire"),
         ],
       ),
     );
+
+    // title:
+    // subtitle: Column(
+    //   children: [
+    //     Text('J.K Rowling'),
+    //     Row(children: [Text('19.99%'), Text("لاالاالا")]),
+    //   ],
+    //   ),
+    // );
   }
 }
