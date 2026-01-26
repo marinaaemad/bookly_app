@@ -9,8 +9,6 @@ abstract class Style {
   static const textStyle20Normal = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
-    fontFamily: 'GT Sectra Fine',
-    // color: AppColors.grayColor,
   );
   static const textStyle14SemiBold = TextStyle(
     fontSize: 14,

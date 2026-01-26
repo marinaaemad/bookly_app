@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utils/assets/app_assets.dart';
+import 'package:bookly_app/core/utils/colors/app_colors.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -7,19 +8,25 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Image.asset(AppAssets.imageLogo, height: 18),
-        // title: const Text('Bookly'),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search, size: 32),
-          ),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: Image.asset(AppAssets.imageLogo, height: 18),
+          // title: const Text('Bookly'),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+                size: 32,
+                color: AppColors.whiteColor,
+              ),
+            ),
+          ],
+        ),
+        body: HomeViewBody(),
       ),
-      body: HomeViewBody(),
     );
   }
 }
