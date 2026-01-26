@@ -65,7 +65,7 @@ class BestSellerListViewItem extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 40),
-                      BookRating(),
+                      BookRating(mainAxisAlignment: MainAxisAlignment.center),
                     ],
                   ),
                 ],
