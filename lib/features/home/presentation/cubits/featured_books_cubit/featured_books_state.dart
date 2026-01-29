@@ -15,10 +15,15 @@ class FeaturedBooksFailure extends FeaturedBooksState {
   final String errMessage;
 
   const FeaturedBooksFailure({required this.errMessage});
+
+  @override
+  List<Object?> get props => [errMessage];
 }
 
 class FeaturedBooksSuccess extends FeaturedBooksState {
   final List<BookModel> books;
 
   const FeaturedBooksSuccess({required this.books});
+  @override
+  List<Object?> get props => [books];
 }
