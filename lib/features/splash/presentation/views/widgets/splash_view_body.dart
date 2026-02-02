@@ -35,7 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset('assets/images/Logo.png'),
+        Image.asset('assets/images/logo.png'),
         const SizedBox(height: 4),
         //put animated builder instead of using setstate and rebuild all widget this will rebuild this widget only
         SlidingText(slidingAnimation: slidingAnimation),

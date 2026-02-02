@@ -3,8 +3,15 @@ import 'package:bookly_app/core/utils/styles/style.dart';
 import 'package:flutter/material.dart';
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key, required this.mainAxisAlignment});
+  const BookRating({
+    super.key,
+    required this.mainAxisAlignment,
+    required this.rating,
+    required this.count,
+  });
   final MainAxisAlignment mainAxisAlignment;
+  final int rating;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,12 +19,12 @@ class BookRating extends StatelessWidget {
       children: [
         const Icon(Icons.star, color: AppColors.yellowColor),
         const SizedBox(width: 6.3),
-        const Text("4.8", style: Style.textStyle16Medium),
+        Text('$rating', style: Style.textStyle16Medium),
         const SizedBox(width: 5),
 
         Opacity(
           opacity: 0.5,
-          child: Text("(254)", style: Style.textStyle14SemiBold),
+          child: Text("($count)", style: Style.textStyle14SemiBold),
         ),
       ],
     );
