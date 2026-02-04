@@ -1,6 +1,6 @@
 import 'package:bookly_app/core/utils/router/routes_name.dart';
-import 'package:bookly_app/core/widgets/custom_error_widget.dart';
-import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
+import 'package:bookly_app/core/utils/widgets/custom_error_widget.dart';
+import 'package:bookly_app/core/utils/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/features/home/presentation/cubits/featured_books_cubit/featured_book_cubit.dart';
 import 'package:bookly_app/features/home/presentation/cubits/featured_books_cubit/featured_books_state.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_image.dart';

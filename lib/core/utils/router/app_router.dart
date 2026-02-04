@@ -1,6 +1,6 @@
 import 'package:bookly_app/core/utils/router/routes_name.dart';
 import 'package:bookly_app/core/utils/service/api_service.dart';
-import 'package:bookly_app/core/utils/service_locator.dart';
+import 'package:bookly_app/core/utils/service/service_locator.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/data/repo/home_repo_impl.dart';
 import 'package:bookly_app/features/home/presentation/cubits/similar_books_cubit/similar_books_cubit.dart';

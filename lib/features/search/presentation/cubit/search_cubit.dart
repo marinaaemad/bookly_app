@@ -12,6 +12,10 @@ class SearchCubit extends Cubit<SearchState> {
   final SearchRepo searchRepo;
   final SearchLocalDataSource searchLocalDataSource;
 
+  void cLearALL() {
+    searchLocalDataSource.clearSearches();
+  }
+
   void recentSearches() {
     final recent = searchLocalDataSource.getRecentSearches();
     emit(SearchInitial(recentSearches: recent));

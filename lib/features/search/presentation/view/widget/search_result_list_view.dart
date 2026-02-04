@@ -1,7 +1,9 @@
-import 'package:bookly_app/core/widgets/custom_error_widget.dart';
-import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/book_list_view_item.dart';
+import 'package:bookly_app/core/utils/styles/style.dart';
+import 'package:bookly_app/core/utils/widgets/custom_error_widget.dart';
+import 'package:bookly_app/core/utils/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/features/search/presentation/cubit/search_cubit.dart';
+import 'package:bookly_app/features/search/presentation/view/widget/initial_list_view.dart';
+import 'package:bookly_app/features/search/presentation/view/widget/success_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,27 +15,21 @@ class SearchResultListView extends StatelessWidget {
     return BlocBuilder<SearchCubit, SearchState>(
       builder: (context, state) {
         if (state is SearchInitial) {
-          return ListView.builder(
-            itemCount: state.recentSearches.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(title: Text(state.recentSearches[index]));
-            },
+          return InitialListView(
+            recentSearchesCount: state.recentSearches.length,
+            allRecentSearches: state.recentSearches,
           );
         } else if (state is SearchFailure) {
           return CustomErrorWidget(errMesg: state.errMsg);
         } else if (state is SearchSuccess) {
           if (state.books.isEmpty) {
-            return Center(child: Text('no Matching Data'));
+            return Center(
+              child: Text('No Matching Data', style: Style.textStyle18SemiBold),
+            );
           }
-          return ListView.builder(
-            padding: EdgeInsets.zero,
-            itemCount: state.books.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: BookListViewItem(book: state.books[index]),
-              );
-            },
+          return SuccessListView(
+            booksCount: state.books.length,
+            allBooks: state.books,
           );
         } else {
           return CustomLoadingIndicator();

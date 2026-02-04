@@ -1,7 +1,7 @@
 import 'package:bookly_app/core/utils/colors/app_colors.dart';
 import 'package:bookly_app/core/utils/router/routes_name.dart';
 import 'package:bookly_app/core/utils/styles/style.dart';
-import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
+import 'package:bookly_app/core/utils/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:cached_network_image/cached_network_image.dart';

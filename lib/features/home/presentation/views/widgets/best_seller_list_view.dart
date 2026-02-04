@@ -1,5 +1,5 @@
-import 'package:bookly_app/core/widgets/custom_error_widget.dart';
-import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
+import 'package:bookly_app/core/utils/widgets/custom_error_widget.dart';
+import 'package:bookly_app/core/utils/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/features/home/presentation/cubits/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly_app/features/home/presentation/cubits/newest_books_cubit/newest_books_state.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_list_view_item.dart';
